@@ -8,8 +8,8 @@ link_directories(/usr/local/lib)
 add_subdirectory(libs)
 
 # add the main executable
-add_executable(main main.cpp)
+add_executable(main main.cc)
 
 #tell the linker what to link
-target_link_libraries(main utils)# ${pkg_name_LIBRARIES})
+target_link_libraries(main libs) #vector3 image)# ${pkg_name_LIBRARIES})
 

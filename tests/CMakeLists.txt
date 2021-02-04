@@ -24,7 +24,7 @@ test_utils.cpp)
 
 # Link the executable to needed libraries.
 target_link_libraries(${TEST_BINARY} 
-utils 
+libs 
 gtest gtest_main # GTest libraries
 )
 
