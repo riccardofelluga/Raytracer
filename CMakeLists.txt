@@ -1,4 +1,4 @@
-project(cpp_boilerplate) #mandatory
+project(raytracer) #mandatory
 cmake_minimum_required(VERSION 3.1) #mandatory
 set(CMAKE_CXX_STANDARD 11) #use c++11
 # Set build type if not set.

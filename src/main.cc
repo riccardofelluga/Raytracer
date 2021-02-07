@@ -1,8 +1,5 @@
 #include <iostream>
 
-#include "image.h"
+#include "libs/image.h"
 
-int main(int argc, char** argv) {
-  PrintHelloUtils();
-  return 0;
-}
+int main(int argc, char** argv) { return 0; }
