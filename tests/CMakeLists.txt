@@ -20,7 +20,12 @@ set(TEST_BINARY ${PROJECT_NAME}_test)
 
 # This is an executable that runs the tests.
 add_executable(${TEST_BINARY} 
-test_utils.cpp)
+test_vector3.cc
+test_image.cc
+test_scene.cc
+test_object.cc
+test_camera.cc
+test_ray.cc)
 
 # Link the executable to needed libraries.
 target_link_libraries(${TEST_BINARY} 
