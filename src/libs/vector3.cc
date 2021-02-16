@@ -20,6 +20,10 @@ Vector3 Vector3::cross(const Vector3& vector) const {
                  x_ * vector.y() - y_ * vector.x());
 }
 
+float Vector3::dot(const Vector3& vector) const {
+  return x_ * vector.x() + y_ * vector.y() + z_ * vector.z();
+}
+
 Vector3 Vector3::normalize() const { return *this / this->length(); }
 
 float Vector3::length() const { return std::sqrt(x_ * x_ + y_ * y_ + z_ * z_); }

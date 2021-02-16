@@ -124,3 +124,13 @@ TEST_F(Vector3Test, SubtractionByVector) {
   ASSERT_EQ(sub.y(), -2);
   ASSERT_EQ(sub.z(), 32);
 }
+
+TEST_F(Vector3Test, DotProduct_Unitary) {
+  float dot_prod = vector_.dot(Vector3(1, 1, 1));
+  ASSERT_EQ(dot_prod, 32);
+}
+
+TEST_F(Vector3Test, DotProduct_General) {
+  float dot_prod = vector_.dot(Vector3(4, -2, -1));
+  ASSERT_EQ(dot_prod, -31);
+}

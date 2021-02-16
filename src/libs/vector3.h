@@ -17,6 +17,7 @@ class Vector3 {
   Vector3 operator+(const Vector3& vector) const;
 
   Vector3 cross(const Vector3& vector) const;
+  float dot(const Vector3& vector) const;
   Vector3 normalize() const;
 
   float length() const;
