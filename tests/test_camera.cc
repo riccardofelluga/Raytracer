@@ -31,9 +31,9 @@ TEST_F(CameraTest, RayDirectionIsNormalized) {
 
 TEST_F(CameraTest, RayCenterPixel) {
   Ray center_ray = camera_.PixelToRay(960, 540);
-  ASSERT_NEAR(center_ray.direction().x(), 0.38f, 0.05);
-  ASSERT_NEAR(center_ray.direction().y(), -0.85f, 0.05);
-  ASSERT_NEAR(center_ray.direction().z(), 0.37f, 0.05);
+  ASSERT_NEAR(center_ray.direction().x(), 0.69f, 0.05);
+  ASSERT_NEAR(center_ray.direction().y(), -0.69f, 0.05);
+  ASSERT_NEAR(center_ray.direction().z(), 0.21f, 0.05);
 }
 
 TEST_F(CameraTest, RayLastPixel) {

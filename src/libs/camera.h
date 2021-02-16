@@ -9,7 +9,7 @@ class Camera {
          int sensor_width, int horizontal_resolution,
          float sensor_aspect_ratio);
 
-  Ray PixelToRay(int pixel_x, int pixel_y) const;
+  Ray PixelToRay(float pixel_x, float pixel_y) const;
 
  private:
   Vector3 origin_;
