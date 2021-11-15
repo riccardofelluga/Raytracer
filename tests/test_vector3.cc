@@ -9,6 +9,13 @@ class Vector3Test : public ::testing::Test {
   Vector3 vector_;
 };
 
+TEST_F(Vector3Test, EmptyInitializeInOrigin) {
+  Vector3 vec;
+  ASSERT_EQ(vec.x(), 0);
+  ASSERT_EQ(vec.y(), 0);
+  ASSERT_EQ(vec.z(), 0);
+}
+
 TEST_F(Vector3Test, WillReturnItself_AfterMultWithUnitaryVec) {
   Vector3 mult_vector = vector_ * Vector3(1.0f, 1.0f, 1.0f);
   ASSERT_EQ(mult_vector.x(), 0.0f);

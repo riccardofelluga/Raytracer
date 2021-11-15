@@ -8,12 +8,6 @@
 
 #include "vector3.h"
 
-struct Color {
-  int r;
-  int g;
-  int b;
-};
-
 class Image {
  public:
   Image(const std::string file_name, int width, int height);

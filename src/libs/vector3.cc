@@ -1,5 +1,6 @@
 #include "vector3.h"
 
+Vector3::Vector3() : x_{0}, y_{0}, z_{0} {}
 Vector3::Vector3(float x, float y, float z) : x_{x}, y_{y}, z_{z} {}
 
 float Vector3::x() const { return x_; }
@@ -26,7 +27,7 @@ float Vector3::dot(const Vector3& vector) const {
 
 Vector3 Vector3::normalize() const { return *this / this->length(); }
 
-float Vector3::length() const { return std::sqrt(x_ * x_ + y_ * y_ + z_ * z_); }
+float Vector3::length() const { return std::sqrt(this->dot(*this)); }
 
 Vector3 operator*(const Vector3& vector, const float scalar) {
   return Vector3(vector.x() * scalar, vector.y() * scalar, vector.z() * scalar);

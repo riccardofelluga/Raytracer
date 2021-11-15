@@ -5,7 +5,8 @@ vector3.cc
 scene.cc
 object.cc
 camera.cc
-ray.cc)
+ray.cc
+light.cc)
 
 # link libraries together to use them from one another lib.
 # target_link_libraries(utils another_lib)

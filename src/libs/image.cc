@@ -20,8 +20,8 @@ bool Image::Write(const std::string& file_name) const {
   out_file << "P3\n" << width_ << " " << height_ << "\n255\n";
 
   for (Color pixel_value : data_) {
-    out_file << pixel_value.r << " " << pixel_value.g << " " << pixel_value.b
-             << "\n";
+    out_file << (int)pixel_value.x() << " " << (int)pixel_value.y() << " "
+             << (int)pixel_value.z() << "\n";
   }
 
   out_file.close();

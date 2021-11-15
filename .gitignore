@@ -39,3 +39,6 @@ build/**
 
 #bin
 bin/**
+
+# DS_store
+.DS_Store

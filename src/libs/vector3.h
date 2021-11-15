@@ -6,6 +6,7 @@
 
 class Vector3 {
  public:
+  Vector3();
   Vector3(float x, float y, float z);
 
   float x() const;
@@ -27,6 +28,8 @@ class Vector3 {
   float y_;
   float z_;
 };
+
+typedef Vector3 Color;
 
 Vector3 operator*(const Vector3& vector, const float scalar);
 Vector3 operator*(const float scalar, const Vector3& vector);

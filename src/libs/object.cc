@@ -1,22 +1,21 @@
 #include "object.h"
 
-Object::Object(Vector3 origin, Color color) : origin_{origin}, color_{color} {}
+Object::Object(Vector3 origin, Color color, int radius)
+    : origin_{origin}, color_{color}, radius_{radius} {}
 
 const Vector3& Object::origin() const { return origin_; }
 const Color& Object::color() const { return color_; }
 
-Vector3 Object::intersect(const Ray& ray) const {
-  float radius = 1;
-  Vector3 distance = ray.origin() - origin_;
-  float a = ray.direction().dot(ray.direction());
-  float b = 2 * distance.dot(ray.direction());
-  float c = distance.dot(distance) - radius * radius;
-  float det = (b * b - 4 * a * c);
+bool Object::intersect(const Ray& ray, Intersection& intersection) const {
+  Vector3 distance_from_ray = origin_ - ray.origin();
+  float v = distance_from_ray.dot(ray.direction());
+  float det =
+      radius_ * radius_ - (distance_from_ray.dot(distance_from_ray) - v * v);
   if (det > 0) {
-    float t = (-b - std::sqrt(det)) / (2 * a);
-    Vector3 norm = (ray.origin() + t * ray.direction()) - origin_;
-    Vector3 norm_d = norm / norm.length();
-    return norm_d;
+    float d = std::sqrt(det);
+    intersection.position = ray.At(v - d);
+    intersection.norm = (origin_ - intersection.position).normalize();
+    return true;
   }
-  return {0, 0, 0};
+  return false;
 }

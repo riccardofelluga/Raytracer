@@ -25,7 +25,8 @@ test_image.cc
 test_scene.cc
 test_object.cc
 test_camera.cc
-test_ray.cc)
+test_ray.cc
+test_light.cc)
 
 # Link the executable to needed libraries.
 target_link_libraries(${TEST_BINARY} 

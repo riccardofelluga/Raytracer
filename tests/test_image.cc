@@ -32,9 +32,9 @@ TEST_F(ImageTest, ImageXYWillHavePPMFormatXY) {
 
 TEST_F(ImageTest, PutValueAt) {
   image_.at(0, 0) = {255, 255, 255};
-  ASSERT_EQ(image_.at(0, 0).r, 255);
-  ASSERT_EQ(image_.at(0, 0).g, 255);
-  ASSERT_EQ(image_.at(0, 0).b, 255);
+  ASSERT_EQ(image_.at(0, 0).x(), 255);
+  ASSERT_EQ(image_.at(0, 0).y(), 255);
+  ASSERT_EQ(image_.at(0, 0).z(), 255);
 }
 
 TEST_F(ImageTest, WritePixelValuesToFile) {

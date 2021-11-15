@@ -11,6 +11,8 @@ class Camera {
 
   Ray PixelToRay(float pixel_x, float pixel_y) const;
 
+  Vector3 origin() const;
+
  private:
   Vector3 origin_;
   Vector3 target_point_;

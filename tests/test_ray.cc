@@ -22,3 +22,10 @@ TEST_F(RayTest, RayWithDirection) {
   ASSERT_EQ(ray_direction.y(), 8.9f);
   ASSERT_EQ(ray_direction.z(), 0.0f);
 }
+
+TEST_F(RayTest, GetRayAtT) {
+  Vector3 ray_at = ray_.At(1.0f);
+  ASSERT_EQ(ray_at.x(), 12.0f);
+  ASSERT_EQ(ray_at.y(), 107.9f);
+  ASSERT_EQ(ray_at.z(), -1.0f);
+}

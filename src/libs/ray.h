@@ -9,6 +9,7 @@ class Ray {
 
   Vector3 origin() const;
   Vector3 direction() const;
+  Vector3 At(float t) const;
 
  private:
   Vector3 origin_;

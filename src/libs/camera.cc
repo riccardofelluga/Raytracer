@@ -13,6 +13,8 @@ Camera::Camera(Vector3 position, Vector3 target_point, Vector3 up,
       horizontal_resolution_{horizontal_resolution},
       sensor_aspect_ratio_{sensor_aspect_ratio} {}
 
+Vector3 Camera::origin() const { return origin_; }
+
 Ray Camera::PixelToRay(float pixel_x, float pixel_y) const {
   Vector3 camera_z = (target_point_ - origin_).normalize();
   Vector3 camera_x = camera_z.cross(up_).normalize();
